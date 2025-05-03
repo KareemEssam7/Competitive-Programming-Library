@@ -5,9 +5,11 @@ public:
 
     SegTree(int n)
     {
-        while (sz <= n) sz <<= 1;
-        sz <<= 1;
-        T.resize(sz);
+        this->sz = n;
+        int cur = 1;
+        while (sz <= n) cur <<= 1;
+        cur <<= 1;
+        T.resize(cur);
     }
 
     void build(vector<t>&v) {
